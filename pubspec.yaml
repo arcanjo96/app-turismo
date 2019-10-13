@@ -30,6 +30,8 @@ dependencies:
   flutter_splash_screen: ^0.1.0
   video_player: ^0.10.2+1
   font_awesome_flutter: ^8.5.0
+  google_maps_flutter: ^0.5.21+7
+  permission_handler: ^3.2.2
 
 dev_dependencies:
   flutter_test:

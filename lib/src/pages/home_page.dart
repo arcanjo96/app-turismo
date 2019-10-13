@@ -1,9 +1,16 @@
+import 'package:app_turismo_tcc/src/pages/map_page.dart';
 import 'package:app_turismo_tcc/src/utils/drawer_menu.dart';
 import 'package:app_turismo_tcc/src/widgets/camera.dart';
 import 'package:app_turismo_tcc/src/widgets/carousel_slider.dart' as prefix0;
+import 'package:app_turismo_tcc/src/widgets/google_maps.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,20 +47,31 @@ class HomePage extends StatelessWidget {
             ),
           ),
           prefix0.CarouselDemo(),
-          Container(
-            height: 250.0,
-            color: Colors.red,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MapPage(),
+                ),
+              );
+            },
+            child: Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                Container(
+                  color: Colors.black,
+                  height: 250.0,
+                  width: double.infinity,
+                ),
+                Text("Encontre restaurantes próximos a voce.", style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                ),),
+              ],
+            ),
           ),
-          Divider(),
-          Container(
-            height: 250.0,
-            color: Colors.blue,
-          ),
-          Divider(),
-          Container(
-            height: 250.0,
-            color: Colors.yellow,
-          ),
+          Divider(color: Colors.transparent,),
         ],
       ),
       drawer: DrawerMenu(),
