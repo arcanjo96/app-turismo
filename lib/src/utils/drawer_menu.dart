@@ -13,10 +13,10 @@ class DrawerMenu extends StatelessWidget {
         children: <Widget>[
           UserAccountsDrawerHeader(
             currentAccountPicture: CircleAvatar(
-              backgroundImage: NetworkImage("https://picsum.photos/id/945/64/64"),
+              backgroundImage: NetworkImage("https://image.flaticon.com/icons/png/128/145/145852.png"),
             ),
-            accountName: Text("Lucas Daniel"),
-            accountEmail: Text("lucas@teste.com"),
+            accountName: Text("Maria Eduarda"),
+            accountEmail: Text("eduarda@gmail.com"),
           ),
           ListTile(
             leading: Image.asset("assets/images/house.png", height: 30.0, color: Colors.grey,),

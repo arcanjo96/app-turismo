@@ -15,16 +15,11 @@ class _LoginPageState extends State<LoginPage> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  stops: [0.1, 0.4, 0.6, 0.9],
-                  colors: [
-                    Colors.white10,
-                    Colors.blue,
-                    Colors.indigo,
-                    Colors.teal
-                  ])),
+            image: DecorationImage(
+              image: ExactAssetImage('assets/images/login_image.jpeg'),
+              fit: BoxFit.cover
+            ),
+          ),
           padding: EdgeInsets.all(10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -68,48 +63,53 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Divider(color: Colors.transparent,),
-              Container(
-                height: 50.0,
-                width: MediaQuery.of(context).size.width / 1.5,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    stops: [0.3, 1],
-                    colors: [Colors.blueAccent, Colors.greenAccent]
-                  ),
-                  borderRadius: BorderRadius.circular(50.0)
-                ),
-                child: SizedBox.expand(
-                  child: FlatButton(
-                    onPressed: _login,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text("ENTRAR", style: TextStyle(color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),),
-                        Icon(Icons.arrow_forward, color: Colors.white, size: 30.0,),
-                      ],
+              Row(
+                children: <Widget>[
+                  Container(
+                    height: 50.0,
+                    width: MediaQuery.of(context).size.width / 2.5,
+                    decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            stops: [0.3, 1],
+                            colors: [Colors.white38, Colors.white38]
+                        ),
+                        borderRadius: BorderRadius.circular(5.0)
+                    ),
+                    child: SizedBox.expand(
+                      child: FlatButton(
+                        onPressed: _login,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text("Entrar", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold),),
+                            Icon(Icons.arrow_forward, color: Colors.white, size: 20.0,),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-              Divider(color: Colors.transparent,),
-              Text("Ou", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-              Container(
-                height: 50.0,
-                color: Colors.transparent,
-                child: SizedBox.expand(
-                  child: FlatButton(
-                    onPressed: _goToRegisterPage,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text("Crie sua conta", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold),),
-                        Icon(Icons.arrow_forward, color: Colors.white, size: 20.0,),
-                      ],
+                  Expanded(
+                    child: Container(
+                      height: 50.0,
+                      color: Colors.transparent,
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: SizedBox.expand(
+                        child: FlatButton(
+                          onPressed: _goToRegisterPage,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text("        Crie sua conta", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold),),
+                              Icon(Icons.arrow_forward, color: Colors.white, size: 20.0,),
+                            ],
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ],
           ),

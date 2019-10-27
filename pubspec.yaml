@@ -74,6 +74,9 @@ flutter:
    - assets/images/praias/litoral-norte/porto-da-rua.jpg
    - assets/images/praias/litoral-norte/praia-japaratinga.jpg
    - assets/images/praias/litoral-norte/maragogi.jpg
+   - assets/videos/intro.mp4
+   - assets/images/login_image.jpeg
+   - assets/images/comida-banner.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -86,7 +89,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+     - family: Agnetha
+       fonts:
+         - asset: assets/fonts/Agnetha.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

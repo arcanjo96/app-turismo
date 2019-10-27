@@ -1,6 +1,6 @@
 import 'package:app_turismo_tcc/src/widgets/card_praia.dart';
+import 'package:app_turismo_tcc/src/widgets/carousel_litoral_central.dart' as prefix1;
 import 'package:flutter/material.dart';
-import 'package:app_turismo_tcc/src/widgets/carousel_slider.dart' as prefix0;
 
 class LitoralCentralPage extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class LitoralCentralPage extends StatelessWidget {
               fontWeight: FontWeight.bold,
               fontSize: 18.0,
             ),),),
-            Tab(child: Text("História", style: TextStyle(
+            Tab(child: Text("Cultura", style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 18.0,
             ),),)
@@ -34,24 +34,23 @@ class LitoralCentralPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.all(10.0),
-                height: 250.0,
+                height: 258.0,
                 width: double.infinity,
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      "Destinos em destaque",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 22.0),
-                    ),
-                    prefix0.CarouselDemo()
+                    Text("Destinos em destaque", style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                        fontFamily: "Agnetha",
+                        height: 1.5,
+                        color: Colors.blue
+                    ), textAlign: TextAlign.center,),
+                    prefix1.CarouselLitoralCentral(),
                   ],
                 ),
               ),
-              Divider(
-                color: Colors.transparent,
-              ),
               CardPraia(
-                  "assets/images/praias/praia-jatiuca.jpg", "Praia de Jatiuca"),
+                  "assets/images/praias/praia-jatiuca.jpg", "Praia de Jatiúca"),
               Divider(
                 color: Colors.transparent,
               ),
@@ -61,7 +60,7 @@ class LitoralCentralPage extends StatelessWidget {
                 color: Colors.transparent,
               ),
               CardPraia("assets/images/praias/praia-pajucara.jpg",
-                  "Praia de Pajucara"),
+                  "Praia de Pajuçara"),
               Divider(
                 color: Colors.transparent,
               ),
@@ -71,7 +70,7 @@ class LitoralCentralPage extends StatelessWidget {
                 color: Colors.transparent,
               ),
               CardPraia("assets/images/praias/praia-garca-torta.jpg",
-                  "Praia de Garca Torta"),
+                  "Praia de Garça Torta"),
               Divider(
                 color: Colors.transparent,
               ),
@@ -86,7 +85,7 @@ class LitoralCentralPage extends StatelessWidget {
                 color: Colors.transparent,
               ),
               CardPraia("assets/images/praias/praia-barra-santo-antonio.jpg",
-                  "Barra de Santo Antonio"),
+                  "Barra de Santo Antônio"),
             ],
           ),
         ),
