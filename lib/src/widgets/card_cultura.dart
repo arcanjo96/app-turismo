@@ -1,14 +1,14 @@
 import 'package:app_turismo_tcc/src/pages/praia_page.dart';
 import 'package:flutter/material.dart';
 
-class CardPraia extends StatelessWidget {
+class CardCultura extends StatelessWidget {
 
   String pathImg;
   String title;
   String description;
   String toDo;
 
-  CardPraia(this.pathImg, this.title, this.description, this.toDo);
+  CardCultura(this.pathImg, this.title, this.description, this.toDo);
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +35,7 @@ class CardPraia extends StatelessWidget {
                 color: Colors.white30,
               ),
               margin: EdgeInsets.only(bottom: 16.0),
+              padding: EdgeInsets.all(5.0),
               height: 60.0,
               width: 200.0,
               child: Center(

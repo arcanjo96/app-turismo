@@ -32,6 +32,7 @@ dependencies:
   font_awesome_flutter: ^8.5.0
   google_maps_flutter: ^0.5.21+7
   permission_handler: ^3.2.2
+  device_apps: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +78,14 @@ flutter:
    - assets/videos/intro.mp4
    - assets/images/login_image.jpeg
    - assets/images/comida-banner.jpeg
+   - assets/images/cultura/cultura-litoral-central/feirinha-artesanato.jpg
+   - assets/images/cultura/cultura-litoral-central/misa.png
+   - assets/images/cultura/cultura-litoral-central/theo-brandao.png
+   - assets/images/cultura/cultura-litoral-sul/casa-de-marechal.jpg
+   - assets/images/cultura/cultura-litoral-sul/palacio-provincial.jpg
+   - assets/images/cultura/cultura-litoral-sul/santa-maria-madalena.jpg
+   - assets/images/cultura/cultura-litoral-sul/igreja-penedo.jpg
+   - assets/images/cultura/cultura-litoral-sul/santa-maria-dos-anjos.JPG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

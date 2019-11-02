@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:device_apps/device_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -21,25 +22,63 @@ class _CameraAppState extends State<CameraApp> {
       appBar: AppBar(
         title: Text("Tire uma foto"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _takePicture,
-        child: Icon(Icons.camera_alt),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(right: 126.0),
+            height: 50.0,
+            width: MediaQuery.of(context).size.width / 2.5,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    stops: [0.3, 1],
+                    colors: [Color(0xFFa836b5), Color(0xFFfcad44)]
+                ),
+                borderRadius: BorderRadius.circular(5.0)
+            ),
+            child: SizedBox.expand(
+              child: FlatButton(
+                onPressed: _openInsta,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text("Instagram", style: TextStyle(color: Colors.white, fontSize: 16.0, fontWeight: FontWeight.bold),),
+                    Icon(Icons.arrow_forward, color: Colors.white, size: 20.0,),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          FloatingActionButton(
+            onPressed: _takePicture,
+            child: Icon(Icons.camera_alt),
+          ),
+        ],
       ),
       body: _body(),
     );
   }
 
   _body() {
-    return Stack(
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.all(16.0),
-          height: double.infinity,
-          child: Center(
-            child: _image == null ? Text("Nenhuma imagem selecionada.") : Image.file(_image),
+    return SingleChildScrollView(
+      child: Stack(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(16.0),
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              children: <Widget>[
+                Center(
+                  child: _image == null ? Text("Nenhuma imagem selecionada.") : Image.file(_image),
+                ),
+
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -61,5 +100,11 @@ class _CameraAppState extends State<CameraApp> {
     final ByteData bytes1 = await rootBundle.load("$_image");
     await Share.file("turismo image", "turismo.jpg", _image.readAsBytesSync(), "image/jpg");
   }
+
+  _openInsta() async {
+    Application app = await DeviceApps.getApp('com.instagram.android');
+    DeviceApps.openApp(app.packageName);
+  }
+
 
 }
