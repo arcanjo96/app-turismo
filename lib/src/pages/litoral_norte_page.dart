@@ -35,7 +35,6 @@ class LitoralNortePage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.all(10.0),
-                height: 260.0,
                 width: double.infinity,
                 child: Column(
                   children: <Widget>[
@@ -46,10 +45,10 @@ class LitoralNortePage extends StatelessWidget {
                         height: 1.5,
                         color: Colors.blue
                     ), textAlign: TextAlign.center,),
-                    prefix1.CarouselLitoralNorte(),
                   ],
                 ),
               ),
+              prefix1.CarouselLitoralNorte(),
               CardPraia("assets/images/praias/litoral-norte/sao-miguel-dos-milagres.jpg", "São Miguel dos Milagres", "        São Miguel dos Milagres é um dos mais antigos povoados de Alagoas. A colonização começou durante a invasão holandesa, quando moradores de Porto Calvo fugiram à procura de um abrigo onde pudessem observar o movimento dos invasores que utilizavam o rio Manguaba para chegar ao interior. Mas o nome veio depois e tem um motivo: um pescador encontrou na praia uma peça de madeira coberta por musgos e algas e passou a usá-la nos serviços domésticos. Ao limpar a peça, o pescador descobriu que era a estátua de São Miguel Arcanjo, ficando curado de um grande problema de saúde.\n        A notícia se espalhou e o lugar ficou conhecido como São Miguel dos Milagres. Por algum tempo, o povoado liderou o comércio açucareiro e chegou a ser o maior produtor de coco, quando ainda pertencia a Porto de Pedras. Em 1864, foi elevado à vila. Em 1960, foi obtida, finalmente a emancipação. São Miguel dos Milagres fica a 106 km de Maceió e tem quatro praias, nas quais se divide uma população de aproximadamente seis mil habitantes. As praias de areia fina e clara, o mar azul-esverdeado, as piscinas naturais e os recifes de corais são o atrativo de Milagres. Um lugar onde a tranquilidade e o bem-estar são garantidos.", "° Mergulho;\n° Passeio de Jangada;\n° Passeio de Lancha;\n° Passeio de bicicleta;\n° Passeio as piscinas naturais;\n° Passeio de buggy;\n° Passeio barco;"),
               Divider(color: Colors.transparent,),
               CardPraia("assets/images/praias/litoral-norte/porto-de-pedras.jpg", "Porto de Pedras", "", ""),

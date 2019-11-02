@@ -35,7 +35,6 @@ class LitoralCentralPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.all(10.0),
-                height: 258.0,
                 width: double.infinity,
                 child: Column(
                   children: <Widget>[
@@ -46,10 +45,10 @@ class LitoralCentralPage extends StatelessWidget {
                         height: 1.5,
                         color: Colors.blue
                     ), textAlign: TextAlign.center,),
-                    prefix1.CarouselLitoralCentral(),
                   ],
                 ),
               ),
+              prefix1.CarouselLitoralCentral(),
               CardPraia(
                   "assets/images/praias/praia-jatiuca.jpg", "Praia de Jatiúca", "       A principal característica de Jatiúca é o verde intenso de suas águas. Das três principais praias da área urban’	a de Maceió que os turistas mais visitam, a Jatiúca é a que tem ondas mais fortes, reúne surfistas e é sede de campeonatos do esporte ao longo do ano.\n        Barracas, ciclovia e pista de corrida compõem a infraestrutura. Local de fácil acesso, rodeado por shoppings, restaurantes, bares, casas de shows, traillers de lanches.", "° Passeio de Jangada para as piscinas naturais;\n° Passeio das 09 ilhas;\n° Passeio de patinet eletrônico;\n° Passeio de bicicleta em família;\n° Standa up;\n° Caiaque;\n° Surf"),
               Divider(

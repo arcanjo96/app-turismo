@@ -45,7 +45,6 @@ class LitoralSulPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.all(10.0),
-                height: 260.0,
                 width: double.infinity,
                 child: Column(
                   children: <Widget>[
@@ -59,10 +58,10 @@ class LitoralSulPage extends StatelessWidget {
                           color: Colors.blue),
                       textAlign: TextAlign.center,
                     ),
-                    prefix1.CarouselLitoralSul(),
                   ],
                 ),
               ),
+              prefix1.CarouselLitoralSul(),
               CardPraia("assets/images/praias/litoral-sul/praia-fances.jpg",
                   "Marechal Deodoro", "       Quem costuma viajar pelos encantos de Alagoas não pode deixar de conhecer Marechal Deodoro, com suas ruas históricas, casarios, igrejas, santos e anjos dos séculos XVII e XVIII. A história da primeira capital de Alagoas se mistura aos sons da banda de pífano, de Nelson da Rabeca e das Orquestras filarmônicas. Marechal nos encanta com sua lagoa, seus tons azuis esverdeados das praias do francês.\n       Os sabores da culinária da barra nova e massagueira. Desta forma você não pode esquecer de conhecer os pontos de file, um material registrado como patrimônio Alagoano com seus bordados cheios de cores e peças versáteis.  Por fim, não deixe de desfrutar de um clima bucólico, um jeito que só a gente sabe fazer. ", "° Casa de Marechal;\n° Construções antigas;\n° Igrejas consideradas patrimônio histórico e artístico nacional;\n° Igreja Nossa Senhora do Amparo;\n° Igreja Nossa Senhora da Conceição;\n° Igreja do Rosário Negros;\n° Convento de Santa Maria Madalena;\n° Ordem terceira de São Francisco;\n° Palácio Provincial;\n° Casa Nelson da Rabeca;\n° Massagueira;\n° Barra Nova;\n° Praia do Frances;\n° Saborear cocadas e doces regionais na vila de artesanato no Frances;\n° Polo gastronômico com diversas comidas regionais;\n° Fazer passeio como:; Surf;\n° Stand up no mar;\n° Caiaque;\n° Mergulho;\n° Passeio de barco;\n° Hobie cat;\n° Canoa Havaiana;\n° Kite surf;\n° Passeio de catamarã;\n° Paleteia"),
               Divider(
